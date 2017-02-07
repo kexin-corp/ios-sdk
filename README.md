@@ -37,10 +37,9 @@
 ## 二、<a name="Version">版本要求</a>
 iOS 8 及以上版本
 
-## 三、<a name="Integrated">接入方法</a>
-
+## 三、<a name="Integrated">接入方法</a> 
 - 将FaLockSDK.framework拖入工程目录：
-- 导入头文件：#import <CoreBluetooth/CoreBluetooth.h> #import <FaLockSDK/FaLockSDK.h>
+- 导入头文件：`#import <CoreBluetooth/CoreBluetooth.h> #import <FaLockSDK/FaLockSDK.h>`
 - 创建FaLockCentralManager对象，调用scanPeripherals方法进行蓝牙设备扫描
 - 设置扫描设备回调Block,setBlockOnDiscoverToPeripherals。调用findScannedPeripherals获取扫描到的设备
 - 用户点击手势处理，调用connectToPeripheral方法连接外设
