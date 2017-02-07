@@ -4,7 +4,9 @@
 - [一、简介](#Introduction)
     - [平台简介](#Platform_Introduction)
     - [APP SDK简介](#sdk_Introduction)
-
+- [二、版本要求](#Version)
+- [三、接入方法](#Integrated)
+- [四、注意事项](#Notice)
 
 ## 一、<a name="Introduction">简介</a>
 
@@ -30,3 +32,12 @@
 - 提供数据接收与发送的接口
 - 提供底层网络和设备状态回调接口
 - 使开发者简化APP开发流程，快速完成APP开发，开发者仅需关注APP业务功能即可，而相对复杂的协议与错误处理等事项可忽略。
+
+
+## 二、<a name="Version">版本要求</a>
+iOS 8 及以上版本
+
+## 三、<a name="Integrated">接入方法</a>
+关于如何使用 SDK 请参考 docs 目录下面的接入文档或者参考提供的 example 工程。
+
+## 四、<a name="Notice">注意事项</a>
