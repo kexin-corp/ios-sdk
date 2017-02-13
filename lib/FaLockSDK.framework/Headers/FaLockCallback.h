@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-//设备状态改变的委托
+//设备状态改变的block
 typedef void (^CentralManagerDidUpdateStateBlock)(CBCentralManager *central);
 
-//找到设备的委托
+//扫描不到设备锁block
+typedef void (^ScanFailureBlock)(NSDictionary *response);
+
+//找到设备的block
 typedef void (^DiscoverPeripheralsBlock)(CBCentralManager *central,CBPeripheral *peripheral,NSDictionary *advertisementData,NSNumber *RSSI,NSDictionary *response);
 
 //连接设备成功的block
@@ -48,15 +51,19 @@ typedef void (^InitialLockBlock)(NSDictionary *response);
 //返回开锁结果Block
 typedef void (^OpenTheLockBlock)(NSDictionary *response);
 
-//返回锁状态详情Block
+//返回锁电量状态详情Block
 typedef void (^LockBatteryBlock)(NSDictionary *response);
+
+//返回锁状态详情Block
 typedef void (^LockStateBlock)(NSDictionary *response);
 
 @interface FaLockCallback : NSObject
 //设备状态改变
 @property (nonatomic, copy) CentralManagerDidUpdateStateBlock blockOnCentralManagerDidUpdateState;
-//找到设备
+//扫描不到设备
 @property (nonatomic, copy) DiscoverPeripheralsBlock blockOnDiscoverPeripherals;
+//找到设备
+@property (nonatomic, copy) ScanFailureBlock ScanFailureBlock;
 //连接设备
 @property (nonatomic, copy) ConnectedPeripheralBlock blockOnConnectedPeripheral;
 //连接设备失败

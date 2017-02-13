@@ -13,6 +13,7 @@
 		0201E5111DDD4DE500FC5911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0201E5101DDD4DE500FC5911 /* Assets.xcassets */; };
 		0201E5141DDD4DE500FC5911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0201E5121DDD4DE500FC5911 /* LaunchScreen.storyboard */; };
 		021CF9BA1E487D4600106D5A /* FaLockSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021CF9B91E487D4600106D5A /* FaLockSDK.framework */; };
+		023E7F051E51D50300D92629 /* FaLockSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023E7F041E51D50300D92629 /* FaLockSDK.framework */; };
 		02D7AEA91DDD543700BB67F0 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D7AEA81DDD543700BB67F0 /* libstdc++.tbd */; };
 		02D7AFAC1DDD57C200BB67F0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D7AFAB1DDD57C200BB67F0 /* libz.tbd */; };
 		02F279831E4969A500C4CDED /* MBProgressHUD+ZYG.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2797E1E4969A500C4CDED /* MBProgressHUD+ZYG.m */; };
@@ -20,7 +21,6 @@
 		02F279851E4969A500C4CDED /* MBProgressHUD_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F279801E4969A500C4CDED /* MBProgressHUD_error@2x.png */; };
 		02F279861E4969A500C4CDED /* MBProgressHUD_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F279811E4969A500C4CDED /* MBProgressHUD_success.png */; };
 		02F279871E4969A500C4CDED /* MBProgressHUD_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F279821E4969A500C4CDED /* MBProgressHUD_success@2x.png */; };
-		02F279891E496B5100C4CDED /* FaLockSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F279881E496B5100C4CDED /* FaLockSDK.framework */; };
 		07E9AB5F0A50A1FBF5CE842F /* libPods-First.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D14E48324C62FCA1A7DBDB5 /* libPods-First.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +48,7 @@
 		0201E5131DDD4DE500FC5911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0201E5151DDD4DE500FC5911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		021CF9B91E487D4600106D5A /* FaLockSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaLockSDK.framework; sourceTree = "<group>"; };
+		023E7F041E51D50300D92629 /* FaLockSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaLockSDK.framework; sourceTree = "<group>"; };
 		02D7AEA81DDD543700BB67F0 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		02D7AFAB1DDD57C200BB67F0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		02F2797D1E4969A500C4CDED /* MBProgressHUD+ZYG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ZYG.h"; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		02F279801E4969A500C4CDED /* MBProgressHUD_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MBProgressHUD_error@2x.png"; sourceTree = "<group>"; };
 		02F279811E4969A500C4CDED /* MBProgressHUD_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MBProgressHUD_success.png; sourceTree = "<group>"; };
 		02F279821E4969A500C4CDED /* MBProgressHUD_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MBProgressHUD_success@2x.png"; sourceTree = "<group>"; };
-		02F279881E496B5100C4CDED /* FaLockSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaLockSDK.framework; sourceTree = "<group>"; };
 		583C608BF9FB7F685EC6D3F2 /* Pods-First.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First.debug.xcconfig"; path = "Pods/Target Support Files/Pods-First/Pods-First.debug.xcconfig"; sourceTree = "<group>"; };
 		5D14E48324C62FCA1A7DBDB5 /* libPods-First.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-First.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7960C53862510E47DD802B /* Pods-First.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First.release.xcconfig"; path = "Pods/Target Support Files/Pods-First/Pods-First.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				02D7AEA91DDD543700BB67F0 /* libstdc++.tbd in Frameworks */,
 				07E9AB5F0A50A1FBF5CE842F /* libPods-First.a in Frameworks */,
 				021CF9BA1E487D4600106D5A /* FaLockSDK.framework in Frameworks */,
-				02F279891E496B5100C4CDED /* FaLockSDK.framework in Frameworks */,
+				023E7F051E51D50300D92629 /* FaLockSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 		021CF9C81E487D9E00106D5A /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				02F279881E496B5100C4CDED /* FaLockSDK.framework */,
+				023E7F041E51D50300D92629 /* FaLockSDK.framework */,
 			);
 			path = Framework;
 			sourceTree = "<group>";

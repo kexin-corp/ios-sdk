@@ -18,6 +18,7 @@
 @property (nonatomic, strong) UITableView          *tableView;
 @property (nonatomic, strong) FaLockCentralManager *manager;
 @property (nonatomic, strong) NSArray              *peripherals;
+@property (nonatomic, strong) NSArray              *peripheralInfos;
 @end
 
 @implementation ViewController
@@ -51,6 +52,7 @@
     [_manager setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI, NSDictionary *response) {
         
         weakself.peripherals = [weakself.manager findScannedPeripherals];
+        weakself.peripheralInfos = [weakself.manager findInfoPeripherals];
         [weakself.tableView reloadData];
     }];
     
@@ -86,18 +88,25 @@
     
     if (!cell) {
         
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell.textLabel.font = [UIFont systemFontOfSize:15.f];
     }
     
     CBPeripheral *object = _peripherals[indexPath.row];
-    cell.textLabel.text = object.name;
+    NSDictionary *info   = _peripheralInfos[indexPath.row];
     
+    cell.textLabel.text = [NSString stringWithFormat:@"%@  (lock_id:%@)",object.name,info[@"lock_id"]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"mac:%@",info[@"mac"]];
+    
+    // 正在连接的锁显示红色、未连接显示黑色
     if ([object.name isEqualToString:[_manager findConnectedPeripherals].name]) {
         
         cell.textLabel.textColor = [UIColor redColor];
+        cell.detailTextLabel.textColor = [UIColor redColor];
     }else{
         
         cell.textLabel.textColor = [UIColor blackColor];
+        cell.detailTextLabel.textColor = [UIColor blackColor];
     }
     
     return cell;

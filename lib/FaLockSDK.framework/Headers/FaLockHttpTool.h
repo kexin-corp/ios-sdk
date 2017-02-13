@@ -10,6 +10,16 @@
 #import "FaLockCallback.h"
 
 @interface FaLockHttpTool : NSObject
+
+// 是否打印日志，默认1：打印 ，0：不打印
+#define KX_IS_SHOW_LOG 0
+
+// 是否为Debug模式、区分内外网
+#define KX_IS_Debug 0
+
+// 是否为第三方使用的SDK、区分提供给别人的SDK还是自己使用
+#define KX_IS_Self 0
+
 /**
  * 单例模式
  */
@@ -159,4 +169,10 @@
  * 用户意见反馈
  */
 - (void)userSendFeedback:(NSString *)contactInfo Content:(NSString *)content HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
+
+/**
+ * 人脸识别，需要名称、身份证、拍照图像
+ */
+- (void)userFaceWithName:(NSString *)name Number:(NSString *)number Photo:(NSString *)photo HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
+
 @end

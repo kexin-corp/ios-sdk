@@ -6,15 +6,15 @@
 	<dict>
 		<key>Headers/FaLockCallback.h</key>
 		<data>
-		eyo958Q98jSbMIFcfO+uUgzdMxs=
+		LAJmBXUFFMOfp21UB6alm3hGW0Q=
 		</data>
 		<key>Headers/FaLockCentralManager.h</key>
 		<data>
-		W992LGxJga4syDTLOWf9vlZIcuc=
+		hg7MxuJ3iSWgG2CGiU+bEAYmxiI=
 		</data>
 		<key>Headers/FaLockHttpTool.h</key>
 		<data>
-		om53tL5yWucraREEHQ9PYsEBmMM=
+		8UHRv9n5gXFqGHW4klZsupC4U/Q=
 		</data>
 		<key>Headers/FaLockSDK.h</key>
 		<data>
@@ -35,33 +35,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eyo958Q98jSbMIFcfO+uUgzdMxs=
+			LAJmBXUFFMOfp21UB6alm3hGW0Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			RYQOwGqH83l8eH532uL6UOouRK/8EVIEctnMej6tkok=
+			VSlpqRXFf93urw+II0N9NMoL2Is3DMPVbvOy/vRpmvA=
 			</data>
 		</dict>
 		<key>Headers/FaLockCentralManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W992LGxJga4syDTLOWf9vlZIcuc=
+			hg7MxuJ3iSWgG2CGiU+bEAYmxiI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZaiFCJlisV/g7z590qfrEk4IAaVwUWI08+kLgnaHsDw=
+			PRMfr+1/H69GE2tQyCsREnpF+r5pxp++eFCuDf77GGg=
 			</data>
 		</dict>
 		<key>Headers/FaLockHttpTool.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			om53tL5yWucraREEHQ9PYsEBmMM=
+			8UHRv9n5gXFqGHW4klZsupC4U/Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			VZqF322bNd/YWpkx4sqjbh8DhA8Iq9iiku1ORIlbDTs=
+			kk1ZFvI3okQPvWUQES7yQ88/TFNh7ldEpdTSZ7N2oSM=
 			</data>
 		</dict>
 		<key>Headers/FaLockSDK.h</key>

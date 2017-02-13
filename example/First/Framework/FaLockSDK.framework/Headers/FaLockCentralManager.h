@@ -13,12 +13,7 @@
 @interface FaLockCentralManager : NSObject
 
 /**
- * 自动连接的设备ID
- */
-@property (nonatomic, copy) NSString *peripherID;
-
-/**
- * 搜寻唯一设备的ID
+ * 指定搜寻设备的ID
  */
 @property (nonatomic, copy) NSString *onlyPeripherID;
 
@@ -26,6 +21,11 @@
  * 扫描Peripherals
  */
 - (void)scanPeripherals;
+
+/**
+ * 扫描不到Peripherals
+ */
+- (void)scanFailure:(ScanFailureBlock)block;
 
 /**
  * 停止扫描
@@ -65,10 +65,13 @@
 - (void)initialLock:(InitialLockBlock)block;
 
 /**
- * APP开锁
+ * 一键APP开锁
  */
 - (void)openTheLock:(OpenTheLockBlock)block;
 
+/**
+ * 一键APP开锁，需要设置当前唯一设备onlyPeripherID
+ */
 - (void)openTheLock:(NSString *)lockId Password:(NSString *)password SEQ:(NSString *)seq OpenFinish:(OpenTheLockBlock)block;
 
 /**
@@ -132,6 +135,11 @@
  *  设置读取到Descriptors值的block |  when read descriptors for characteristic
  */
 - (void)setBlockOnReadValueForDescriptors:(ReadValueForDescriptorsBlock)block;
+
+/**
+ *  设置读取到LockState的block |  when read LockState of peripheral
+ */
+- (void)setBlockOnReadLockState:(LockStateBlock)block;
 
 /**
  *  设置读取到Battery值的block |  when read battery of peripheral
