@@ -38,14 +38,49 @@
 iOS 8 及以上版本
 
 ## 三、<a name="Integrated">接入方法</a> 
-- 将FaLockSDK.framework拖入工程目录：
-- 导入头文件：`#import <CoreBluetooth/CoreBluetooth.h> #import <FaLockSDK/FaLockSDK.h>`
-- 创建FaLockCentralManager对象，调用scanPeripherals方法进行蓝牙设备扫描
-- 设置扫描设备回调Block,setBlockOnDiscoverToPeripherals。调用findScannedPeripherals获取扫描到的设备
-- 用户点击手势处理，调用connectToPeripheral方法连接外设
-- 确保发现外设特征后，先查询锁的状态，再执行开锁操作，否则开锁有可能无效（锁时间同步）
-- 确保发现外设特征后，再执行初始化操作，否则初始化有可能无效
-- 一键开锁只需要调用开锁函数，传入对应参数即可
-- 具体操作方法，参考example 
+1.将FaLockSDK.framework拖入工程目录，引用头文件:
+
+```
+#import <CoreBluetooth/CoreBluetooth.h> 
+#import <FaLockSDK/FaLockSDK.h>
+```
+2.创建FaLockCentralManager蓝牙管理对象，创建完毕会自动扫描蓝牙设备
+
+```
+Swift: 			 manager = FaLockCentralManager.init()
+Objective-C:	_manager = [[FaLockCentralManager alloc] init];
+```
+
+3.设置需要搜索的设备ID（onlyPeripherID），如何不设置将返回所有扫描到的设备和设备信息
+
+```
+Swift: 			 manager?.onlyPeripherID = xxxx
+Objective-C:	_manager.onlyPeripherID = xxxx;
+```
+4.设置扫描设备回调Block,setBlockOnDiscoverToPeripherals。调用findScannedPeripherals获取扫描到的设备，findInfoPeripherals获取设备的信息
+
+```
+// 扫描设备
+Swift: 	manager?.setBlockOnDiscoverToPeripherals({ (central, peripheral, advertisementData, RSSI, response) in
+
+		})
+
+Objective-C:	[_manager setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI, NSDictionary *response) 
+
+				// 搜索到的锁数组
+			    weakself.peripherals = [weakself.manager findScannedPeripherals];
+			    
+			    // 搜索到的锁信息数组
+			    weakself.peripheralInfos = [weakself.manager findInfoPeripherals];
+				}];
+```
+
+5.确保发现外设特征后，先查询锁的状态，再执行开锁操作，否则开锁有可能无效（锁可能需要时间同步）
+
+6.确保发现外设特征后，再执行初始化操作，否则初始化有可能无效
+
+7.一键开锁只需要调用开锁函数，传入对应参数即可
+
+8.具体操作方法，参考example 
  
 ## 四、<a name="Notice">注意事项</a>

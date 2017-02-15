@@ -44,7 +44,6 @@
 - (void)scan
 {
     _manager = [[FaLockCentralManager alloc] init];
-    [_manager scanPeripherals];
     
     __weak typeof(self) weakself = self;
     
