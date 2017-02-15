@@ -5,7 +5,7 @@
     - [平台简介](#Platform_Introduction)
     - [APP SDK简介](#sdk_Introduction)
 - [二、版本要求](#Version)
-- [三、接入方法](#Integrated)
+- [三、接入方法、Project配置](#Integrated)
 - [四、注意事项](#Notice)
 
 ## 一、<a name="Introduction">简介</a>
@@ -37,10 +37,13 @@
 ## 二、<a name="Version">版本要求</a>
 iOS 8 及以上版本
 
-## 三、<a name="Integrated">接入方法</a> 
-1.将FaLockSDK.framework拖入工程目录，引用头文件:
+## 三、<a name="Integrated">接入方法、Project配置</a> 
+1.将FaLockSDK.framework拖入工程目录，配置Project，引用头文件:
 
 ```
+Project配置：Build Phases -> Link Binary With Libraries 加入FaLockSDK.framework libz.tbd libstdc++.tbd
+
+引用头文件：
 #import <CoreBluetooth/CoreBluetooth.h> 
 #import <FaLockSDK/FaLockSDK.h>
 ```
