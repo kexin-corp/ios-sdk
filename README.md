@@ -70,11 +70,11 @@ Swift: 	manager?.setBlockOnDiscoverToPeripherals({ (central, peripheral, adverti
 
 Objective-C:	[_manager setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI, NSDictionary *response) 
 
-				// 搜索到的锁数组
-			    weakself.peripherals = [weakself.manager findScannedPeripherals];
-			    
-			    // 搜索到的锁信息数组
-			    weakself.peripheralInfos = [weakself.manager findInfoPeripherals];
+					// 搜索到的锁数组
+				    weakself.peripherals = [weakself.manager findScannedPeripherals];
+				    
+				    // 搜索到的锁信息数组
+				    weakself.peripheralInfos = [weakself.manager findInfoPeripherals];
 				}];
 ```
 
