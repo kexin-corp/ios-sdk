@@ -13,7 +13,7 @@
 		0201E5111DDD4DE500FC5911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0201E5101DDD4DE500FC5911 /* Assets.xcassets */; };
 		0201E5141DDD4DE500FC5911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0201E5121DDD4DE500FC5911 /* LaunchScreen.storyboard */; };
 		021CF9BA1E487D4600106D5A /* FaLockSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021CF9B91E487D4600106D5A /* FaLockSDK.framework */; };
-		023E7F051E51D50300D92629 /* FaLockSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023E7F041E51D50300D92629 /* FaLockSDK.framework */; };
+		02565B211E5EDAF900990C90 /* FaLockSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02565B201E5EDAF900990C90 /* FaLockSDK.framework */; };
 		02D7AEA91DDD543700BB67F0 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D7AEA81DDD543700BB67F0 /* libstdc++.tbd */; };
 		02D7AFAC1DDD57C200BB67F0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D7AFAB1DDD57C200BB67F0 /* libz.tbd */; };
 		02F279831E4969A500C4CDED /* MBProgressHUD+ZYG.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F2797E1E4969A500C4CDED /* MBProgressHUD+ZYG.m */; };
@@ -48,7 +48,7 @@
 		0201E5131DDD4DE500FC5911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0201E5151DDD4DE500FC5911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		021CF9B91E487D4600106D5A /* FaLockSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaLockSDK.framework; sourceTree = "<group>"; };
-		023E7F041E51D50300D92629 /* FaLockSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaLockSDK.framework; sourceTree = "<group>"; };
+		02565B201E5EDAF900990C90 /* FaLockSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaLockSDK.framework; sourceTree = "<group>"; };
 		02D7AEA81DDD543700BB67F0 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		02D7AFAB1DDD57C200BB67F0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		02F2797D1E4969A500C4CDED /* MBProgressHUD+ZYG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ZYG.h"; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				02D7AEA91DDD543700BB67F0 /* libstdc++.tbd in Frameworks */,
 				07E9AB5F0A50A1FBF5CE842F /* libPods-First.a in Frameworks */,
 				021CF9BA1E487D4600106D5A /* FaLockSDK.framework in Frameworks */,
-				023E7F051E51D50300D92629 /* FaLockSDK.framework in Frameworks */,
+				02565B211E5EDAF900990C90 /* FaLockSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 		021CF9C81E487D9E00106D5A /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				023E7F041E51D50300D92629 /* FaLockSDK.framework */,
+				02565B201E5EDAF900990C90 /* FaLockSDK.framework */,
 			);
 			path = Framework;
 			sourceTree = "<group>";

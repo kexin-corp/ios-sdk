@@ -4,6 +4,34 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/AFHTTPSessionManager.h</key>
+		<data>
+		p3y9y+DZ33iDXLM2/mkVpkPccC4=
+		</data>
+		<key>Headers/AFNetworkReachabilityManager.h</key>
+		<data>
+		R/t4WKNzLfS6JczqTfl+4lPeSCA=
+		</data>
+		<key>Headers/AFNetworking.h</key>
+		<data>
+		AFv03ZXPPEIZ/1OP4o2VKtiehNw=
+		</data>
+		<key>Headers/AFSecurityPolicy.h</key>
+		<data>
+		sbAejRIs5q8A3eCqlJdxh9ldd0s=
+		</data>
+		<key>Headers/AFURLRequestSerialization.h</key>
+		<data>
+		yUuOFpvN5gtri8UhbNkMUi5k+Jw=
+		</data>
+		<key>Headers/AFURLResponseSerialization.h</key>
+		<data>
+		SMvkbb9EMS5yZjuXA8QQswY/3CM=
+		</data>
+		<key>Headers/AFURLSessionManager.h</key>
+		<data>
+		+VCtQ7D7GLBghOxSn//6c8vnQBw=
+		</data>
 		<key>Headers/FaLockCallback.h</key>
 		<data>
 		LAJmBXUFFMOfp21UB6alm3hGW0Q=
@@ -14,7 +42,7 @@
 		</data>
 		<key>Headers/FaLockHttpTool.h</key>
 		<data>
-		8UHRv9n5gXFqGHW4klZsupC4U/Q=
+		e28FlKg37tdTb5Vu8+z0PJ7soQE=
 		</data>
 		<key>Headers/FaLockSDK.h</key>
 		<data>
@@ -22,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7IUZGzIhgQB6cpM83z0E3wLpin0=
+		WvSUD7wHOMsjzCoOdjOs3ZUEWww=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,6 +59,83 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/AFHTTPSessionManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			p3y9y+DZ33iDXLM2/mkVpkPccC4=
+			</data>
+			<key>hash2</key>
+			<data>
+			BqwnAj446Qw/r7PcV4ibwL2mt4PrlFn7q7x+P1EukMA=
+			</data>
+		</dict>
+		<key>Headers/AFNetworkReachabilityManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			R/t4WKNzLfS6JczqTfl+4lPeSCA=
+			</data>
+			<key>hash2</key>
+			<data>
+			J1AT1NAK4MovKULfkwSZBr4x9J1SkaJzWNQ5SB0Eby8=
+			</data>
+		</dict>
+		<key>Headers/AFNetworking.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AFv03ZXPPEIZ/1OP4o2VKtiehNw=
+			</data>
+			<key>hash2</key>
+			<data>
+			erARV6sJ5/vEXwyz7+OvQBShYLP7G9kdZ2c9/Uo2+DA=
+			</data>
+		</dict>
+		<key>Headers/AFSecurityPolicy.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sbAejRIs5q8A3eCqlJdxh9ldd0s=
+			</data>
+			<key>hash2</key>
+			<data>
+			CtR6U4APL0biRZsiCZ6QZ+K1XWqVal9uWDeiAdS3sso=
+			</data>
+		</dict>
+		<key>Headers/AFURLRequestSerialization.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yUuOFpvN5gtri8UhbNkMUi5k+Jw=
+			</data>
+			<key>hash2</key>
+			<data>
+			082CkQ2NOpKoySPbvGCDhUdkPiWyyxt2XFjbpO8hbYI=
+			</data>
+		</dict>
+		<key>Headers/AFURLResponseSerialization.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SMvkbb9EMS5yZjuXA8QQswY/3CM=
+			</data>
+			<key>hash2</key>
+			<data>
+			v8dmXtk3iOEDKdRom9p7PcqmS9mc5j1ZnsZ6ZG+Iw4Q=
+			</data>
+		</dict>
+		<key>Headers/AFURLSessionManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+VCtQ7D7GLBghOxSn//6c8vnQBw=
+			</data>
+			<key>hash2</key>
+			<data>
+			uxAqthDXWPpV5YmCpoDZMjLEl0MOqMs4IuBKmyzU2cY=
+			</data>
+		</dict>
 		<key>Headers/FaLockCallback.h</key>
 		<dict>
 			<key>hash</key>
@@ -57,11 +162,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8UHRv9n5gXFqGHW4klZsupC4U/Q=
+			e28FlKg37tdTb5Vu8+z0PJ7soQE=
 			</data>
 			<key>hash2</key>
 			<data>
-			kk1ZFvI3okQPvWUQES7yQ88/TFNh7ldEpdTSZ7N2oSM=
+			4MRaEKNsBgO4yppeLRHMpoXAgyiL9WRT/ld+DqtQe9I=
 			</data>
 		</dict>
 		<key>Headers/FaLockSDK.h</key>

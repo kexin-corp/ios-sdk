@@ -20,159 +20,61 @@
 // 是否为第三方使用的SDK、区分提供给别人的SDK还是自己使用
 #define KX_IS_Self 0
 
+#define KUserToken                      @"/account/token/update"        // 更新token
+#define KUserLogin                      @"/account/login"               // 登录
+#define KUserVerify                     @"/account/captcha/get"         // 获取验证码
+#define KUserLockList                   @"/v2/user/lock/list"           // 用户锁列表
+#define KUserRegister                   @"/account/register"            // 用户注册
+#define KUserForgetPwd                  @"/account/pwd/retrieve"        // 忘记密码
+#define KUserTelUpdate                  @"/account/tel/update"          // 修改手机号
+#define KUserBindLock                   @"/lock/bind"                   // 用户绑定锁
+#define KUserUnBindLock                 @"/lock/unbind"                 // 用户解绑锁
+#define KUserAddLockMember              @"/lock/member/add"             // 添加锁成员
+#define KUserDeleteLockMember           @"/lock/member/delete"          // 删除锁成员
+#define KUserUpdateUserName             @"/account/user_name/update"    // 更新用户名
+#define KUserUpdateLockMemberNickName   @"/lock/member/update"          // 用户修改锁成员备注名
+#define KUserUpdateLockMemberRoom       @"/lock/member/update"          // 用户修改锁成员房间
+#define KUserShareLockPwd               @"/lock/pwd/share"              // 分享开锁密码
+#define KUserGetLockOpenLogs            @"/lock/open/log/get"           // 获取开锁记录
+#define KUserSendFeedback               @"/user/feedback"               // 用户意见反馈
+#define KUserFaceIdentify               @"/face/identity"               // 人脸识别，需要名称、身份证、拍照图像
+
+#define KLockMemberList                 @"/lock/member/list"            // 锁用户列表
+#define KLockOpen                       @"/lock/pwd/get"                // 开锁
+#define KLockOpenResult                 @"/lock/open/result"            // 上报开锁结果
+#define KLockGetInfo                    @"/lock/get"                    // 获取锁信息
+#define KLockInit                       @"/lock/init"                   // 初始化锁
+#define KLockTimeUpdate                 @"/lock/time_sync/seq/get"      // 时间同步
+#define KLockUpdateResult               @"/lock/time_sync/result"       // 上报时间同步
+#define KLockUpdateInfo                 @"/lock/update"                 // 修改锁信息
+
 /**
  * 单例模式
  */
 + (instancetype)shareTool;
 
 /**
- * 初始化模块
+ * 如何获取到token，需要传入
  */
-- (void)initModule;
+@property (nonatomic, copy) NSString *token;
 
 /**
- * 卸载模块
+ *  普通post方法请求网络数据
+ *
+ *  @param url     请求网址路径
+ *  @param params  请求参数
+ *  @param block   回调
  */
-- (void)uninitModule;
-
-/** ================================= 锁 ===================================== */
+- (void)POST:(NSString *)url params:(NSMutableDictionary *)params HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
 
 /**
- * APP初始化锁
+ *  post方法请求网络数据
+ *
+ *  @param url     请求网址路径
+ *  @param params  请求参数、需要签名
+ *  @param extra   请求参数、不需要签名
+ *  @param block   回调
  */
-- (void)initialLock:(NSString *)lockId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * APP开锁
- */
-- (void)openTheDoor:(NSString *)lockId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 上报服务器开锁结果
- */
-- (void)pushLockOpenResult:(NSString *)lockId SEQ:(int)seq State:(NSString *)state HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 上报服务器时间同步结果
- */
-- (void)pushLockUpdateResult:(NSString *)lockId SEQ:(int)seq State:(NSString *)state HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 获取锁信息
- */
-- (void)getLockInfo:(NSString *)lockId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 获取锁状态
- */
-- (void)getLockState:(NSString *)lockId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 获取锁用户列表
- */
-- (void)getLockMemberList:(NSString *)lockId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 修改锁信息
- */
-- (void)updateLockInfo:(NSString *)lockId LockName:(NSString *)lockName LockAddress:(NSString *)address HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 锁时间同步
- */
-- (void)updateLockTime:(NSString *)lockId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/** ================================= 用户 ===================================== */
-
-/**
- * 设置Token
- */
-- (void)userSetToken:(NSString *)token;
-
-/**
- * 用户注册
- */
-- (void)userRegister:(NSString *)phone password:(NSString *)password HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-
-/**
- * 用户登录
- */
-- (void)userLogin:(NSString *)phone password:(NSString *)password HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户验证码
- */
-- (void)userVerify:(NSString *)phone Condition:(NSString *)condition HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 忘记密码
- */
-- (void)userforgetPassWord:(NSString *)phone password:(NSString *)password HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 修改电话号码
- */
-- (void)userChangeTel:(NSString *)phone HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户绑定锁
- */
-- (void)userBindLock:(NSString *)lockId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户锁解除绑定
- */
-- (void)userUnbindLock:(NSString *)lockId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户锁列表
- */
-- (void)userLockListV2:(NSString *)lastId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户添加锁成员
- */
-- (void)userAddLockMember:(NSString *)lockId Phone:(NSString *)phone NickName:(NSString *)niceName Room:(NSString *)room HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户删除锁成员
- */
-- (void)userDeleteLockMember:(NSString *)lockId Phone:(NSString *)phone HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户修改用户名
- */
-- (void)userUpdateUserName:(NSString *)userName HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户修改修改锁成员备注名
- */
-- (void)userUpdateLockMemberNickName:(NSString *)lockId Phone:(NSString *)phone UserName:(NSString *)userName HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户修改锁成员房间
- */
-- (void)userUpdateLockMemberRoom:(NSString *)lockId Phone:(NSString *)phone RoomName:(NSString *)roomName HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 分享开锁密码
- */
-- (void)userShareLockPwd:(NSString *)lockId Phone:(NSString *)phone OpenTime:(NSTimeInterval)time HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 获取开锁记录
- */
-- (void)userGetLockOpenLogs:(NSString *)lockId BeginTime:(NSString *)begin EndTime:(NSString *)end lastID:(NSString *)lastId HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 用户意见反馈
- */
-- (void)userSendFeedback:(NSString *)contactInfo Content:(NSString *)content HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
-
-/**
- * 人脸识别，需要名称、身份证、拍照图像
- */
-- (void)userFaceWithName:(NSString *)name Number:(NSString *)number Photo:(NSString *)photo HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
+- (void)POST:(NSString *)url params:(NSMutableDictionary *)params extra:(NSMutableDictionary *)extra HttpFinish:(HttpFinishBlock)block Log:(BOOL)log;
 
 @end
