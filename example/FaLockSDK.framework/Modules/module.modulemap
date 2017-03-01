@@ -1,6 +1,0 @@
-framework module FaLockSDK {
-  umbrella header "FaLockSDK.h"
-
-  export *
-  module * { export * }
-}
