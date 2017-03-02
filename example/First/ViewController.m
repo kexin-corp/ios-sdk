@@ -47,6 +47,20 @@
     
     __weak typeof(self) weakself = self;
     
+    // 检查是否打开蓝牙
+    [_manager setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central) {
+        
+        if (central.state == CBManagerStatePoweredOff) {
+            
+            [MBProgressHUD showError:@"请打开蓝牙"];
+        }
+        
+        if (central.state == CBManagerStatePoweredOn) {
+            
+            [weakself.manager scanPeripherals];
+        }
+    }];
+    
     // 扫描设备
     [_manager setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI, NSDictionary *response) {
         
