@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <FaLockSDK/FaLockSDK.h>
+#import <FaLockSDK/FaLockHttpTool.h>
 #import "MBProgressHUD+ZYG.h"
 
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -43,6 +44,12 @@
 
 - (void)scan
 {
+    // 输入分配的AppId，如 app_kexin
+    [FaLockHttpTool shareTool].appid = @"app_kexin";
+    
+    // 输入正式服务器地址，如 https://app.fastboot.net.cn
+    [FaLockHttpTool shareTool].URLString = @"https://app.fastboot.net.cn";
+
     _manager = [[FaLockCentralManager alloc] init];
     
     __weak typeof(self) weakself = self;
@@ -74,8 +81,6 @@
         
         // 显示按钮
         weakself.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"开锁" style:UIBarButtonItemStylePlain target:weakself action:@selector(open)];
-        
-        weakself.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"初始化" style:UIBarButtonItemStylePlain target:weakself action:@selector(initial)];
     }];
     
     // 设备自动断开后处理
@@ -144,15 +149,6 @@
 - (void)open
 {
     [self.manager openTheLock:^(NSDictionary *response) {
-        
-        [MBProgressHUD showToast:response[@"desc"] toView:self.view];
-    }];
-}
-
-// 初始化
-- (void)initial
-{
-    [self.manager initialLock:^(NSDictionary *response) {
         
         [MBProgressHUD showToast:response[@"desc"] toView:self.view];
     }];

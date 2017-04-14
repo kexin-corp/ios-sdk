@@ -50,7 +50,7 @@
 /**
  * 断开设备连接
  */
-- (void)cancelPeripheralConnection:(CBPeripheral *)peripheral;
+- (void)cancelPeripheralConnection;
 
 /**
  * 获取当前连接的peripherals
@@ -58,11 +58,6 @@
 - (CBPeripheral *)findConnectedPeripherals;
 
 #pragma mark - 操作
-
-/**
- * APP初始化锁
- */
-- (void)initialLock:(InitialLockBlock)block;
 
 /**
  * 一键APP开锁
